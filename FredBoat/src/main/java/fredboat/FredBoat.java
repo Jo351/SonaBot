@@ -194,7 +194,7 @@ public abstract class FredBoat {
         executor.submit(FredBoat::hasValidImgurCredentials);
 
         //Initialise JCA
-        executor.submit(FredBoat::loadJCA);
+        //executor.submit(FredBoat::loadJCA);
 
         /* Init JDA */
 
@@ -218,6 +218,8 @@ public abstract class FredBoat {
         shardWatchdogAgent.start();
     }
 
+    //JCA is deprecated, use ChatbotsAPI instead
+    @Deprecated
     private static boolean loadJCA() {
         boolean result = true;
         try {
